@@ -9,5 +9,7 @@ target 'project1' do
   pod 'SideMenu', '~> 6.0'
   pod 'PinterestUISwift'
   pod 'Hero'
+  pod 'Alamofire', '~> 5.5'
+  pod 'lottie-ios'
 
 end

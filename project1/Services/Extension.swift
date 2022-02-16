@@ -60,10 +60,10 @@ extension UIImageView {
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowOpacity = 1
         containerView.layer.shadowOffset = CGSize.zero
-        containerView.layer.shadowRadius = 10
+        containerView.layer.shadowRadius = 7
         containerView.layer.cornerRadius = cornerRadious
         containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadious).cgPath
-        self.clipsToBounds = true
+        self.clipsToBounds = false
         self.layer.cornerRadius = cornerRadious
     }
 }
@@ -95,6 +95,12 @@ extension String {
         return String(self[..<toIndex])
     }
 
+    func dropsubstring(to: Int) -> String {
+        let total = self.count
+        let toIndex = total - to
+        return String(self[..<index(from: toIndex)] )
+    }
+
     func substring(with r: Range<Int>) -> String {
         let startIndex = index(from: r.lowerBound)
         let endIndex = index(from: r.upperBound)
@@ -115,5 +121,13 @@ extension UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
         tap.cancelsTouchesInView = false
         return tap
+    }
+}
+
+
+extension Array {
+    func getElement(at index: Int) -> Element? {
+        let isValidIndex = index >= 0 && index < count
+        return isValidIndex ? self[index] : nil
     }
 }

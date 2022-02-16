@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2E5C5427BA22FF00A94053 /* ShareJokesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E5C5327BA22FF00A94053 /* ShareJokesInfo.swift */; };
+		1D2E5C5B27BA264B00A94053 /* ShareJokesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E5C5927BA264B00A94053 /* ShareJokesTableViewCell.swift */; };
+		1D2E5C5E27BA352700A94053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E5C5D27BA352700A94053 /* Main.storyboard */; };
+		1D36BADB27B53EED00B747D9 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D36BADA27B53EED00B747D9 /* ShareViewController.swift */; };
+		1D36BADE27B53F9500B747D9 /* ShareMemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D36BADD27B53F9500B747D9 /* ShareMemeTableViewCell.swift */; };
 		1D3728A527B37CA100033936 /* StoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3728A427B37CA100033936 /* StoryInfo.swift */; };
 		1D3728A727B37CB300033936 /* StoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3728A627B37CB300033936 /* StoryManager.swift */; };
 		1D3728A927B3A1E300033936 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3728A827B3A1E300033936 /* CollectionViewCell2.swift */; };
@@ -18,7 +23,6 @@
 		1D5088E927AA99D8006B7A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088E827AA99D8006B7A91 /* AppDelegate.swift */; };
 		1D5088EB27AA99D8006B7A91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088EA27AA99D8006B7A91 /* SceneDelegate.swift */; };
 		1D5088ED27AA99D8006B7A91 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088EC27AA99D8006B7A91 /* WelcomeViewController.swift */; };
-		1D5088F027AA99D8006B7A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5088EE27AA99D8006B7A91 /* Main.storyboard */; };
 		1D5088F227AA99DA006B7A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5088F127AA99DA006B7A91 /* Assets.xcassets */; };
 		1D5088F527AA99DA006B7A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5088F327AA99DA006B7A91 /* LaunchScreen.storyboard */; };
 		1D50890027AAAC1E006B7A91 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088FF27AAAC1E006B7A91 /* ChatViewController.swift */; };
@@ -27,6 +31,9 @@
 		1D6609FA27B0D28200296123 /* RoundedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6609F927B0D28200296123 /* RoundedTabBarController.swift */; };
 		1D660A0327B108F500296123 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D660A0127B108F500296123 /* SettingsTableViewCell.swift */; };
 		1D660A0627B10B5800296123 /* IndividualChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D660A0527B10B5800296123 /* IndividualChatViewController.swift */; };
+		1D7047A827B64C36009EDC3A /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7047A727B64C36009EDC3A /* ShareManager.swift */; };
+		1D7047AC27B66837009EDC3A /* ShareMemeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7047AB27B66837009EDC3A /* ShareMemeInfo.swift */; };
+		1D7047AE27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7047AD27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift */; };
 		1D72600D27ABAE7E005314BC /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72600B27ABAE7E005314BC /* ChatTableViewCell.swift */; };
 		1D72600E27ABAE7E005314BC /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D72600C27ABAE7E005314BC /* ChatTableViewCell.xib */; };
 		1D72601027ABBB8B005314BC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72600F27ABBB8B005314BC /* Extension.swift */; };
@@ -58,12 +65,46 @@
 		1D72604627ABDC69005314BC /* FirebaseFunctionsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604527ABDC69005314BC /* FirebaseFunctionsSwift-Beta */; };
 		1D72604827ABDC69005314BC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604727ABDC69005314BC /* FirebaseFunctions */; };
 		1D72604A27ABDC69005314BC /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604927ABDC69005314BC /* FirebaseFirestoreCombine-Community */; };
+		1D791EEF27BB63BC005C0194 /* ShareTvInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EEE27BB63BC005C0194 /* ShareTvInfo.swift */; };
+		1D791EF227BB63DD005C0194 /* ShareWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EF127BB63DD005C0194 /* ShareWeatherInfo.swift */; };
+		1D791EF927BB7EF9005C0194 /* ShareTvCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EF827BB7EF9005C0194 /* ShareTvCollectionViewCell.swift */; };
 		1D943ABB27ABF35A00A0C671 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D943ABA27ABF35A00A0C671 /* LoginViewController.swift */; };
+		1D9512D927BA38CE00BF2F59 /* ShareBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9512D827BA38CE00BF2F59 /* ShareBookTableViewCell.swift */; };
+		1D9512DB27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9512DA27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift */; };
+		1D9512DD27BA390400BF2F59 /* ShareTvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9512DC27BA390400BF2F59 /* ShareTvTableViewCell.swift */; };
+		1D98FEFB27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98FEFA27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift */; };
+		1DBAFDE127BCD9D5006BFF40 /* suncloud1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDDD27BCD9D5006BFF40 /* suncloud1.json */; };
+		1DBAFDE227BCD9D5006BFF40 /* weatherLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDDE27BCD9D5006BFF40 /* weatherLoading.json */; };
+		1DBAFDE327BCD9D5006BFF40 /* rain2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDDF27BCD9D5006BFF40 /* rain2.json */; };
+		1DBAFDE427BCD9D5006BFF40 /* sun3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDE027BCD9D5006BFF40 /* sun3.json */; };
+		1DBAFDE627BCE544006BFF40 /* smoke4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDE527BCE544006BFF40 /* smoke4.json */; };
 		1DBF8F9327B250C300EB0945 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */; };
-		942653CD4565B2900C0908E4 /* Pods_project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */; };
+		1DC0BB2527BA89A9002CF9CA /* Pods_project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */; };
+		1DC0BB2627BA89A9002CF9CA /* Pods_project1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1DC0BB2927BA8E26002CF9CA /* ShareBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0BB2827BA8E26002CF9CA /* ShareBookCollectionViewCell.swift */; };
+		1DC0BB2B27BA902A002CF9CA /* ShareBookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0BB2A27BA902A002CF9CA /* ShareBookInfo.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1DC0BB2727BA89A9002CF9CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DC0BB2627BA89A9002CF9CA /* Pods_project1.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1D2E5C5327BA22FF00A94053 /* ShareJokesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareJokesInfo.swift; sourceTree = "<group>"; };
+		1D2E5C5927BA264B00A94053 /* ShareJokesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareJokesTableViewCell.swift; sourceTree = "<group>"; };
+		1D2E5C5D27BA352700A94053 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1D36BADA27B53EED00B747D9 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1D36BADD27B53F9500B747D9 /* ShareMemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareMemeTableViewCell.swift; sourceTree = "<group>"; };
 		1D3728A427B37CA100033936 /* StoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryInfo.swift; sourceTree = "<group>"; };
 		1D3728A627B37CB300033936 /* StoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryManager.swift; sourceTree = "<group>"; };
 		1D3728A827B3A1E300033936 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
@@ -76,7 +117,6 @@
 		1D5088E827AA99D8006B7A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5088EA27AA99D8006B7A91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D5088EC27AA99D8006B7A91 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		1D5088EF27AA99D8006B7A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D5088F127AA99DA006B7A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D5088F427AA99DA006B7A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D5088F627AA99DA006B7A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,12 +126,29 @@
 		1D6609F927B0D28200296123 /* RoundedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTabBarController.swift; sourceTree = "<group>"; };
 		1D660A0127B108F500296123 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1D660A0527B10B5800296123 /* IndividualChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualChatViewController.swift; sourceTree = "<group>"; };
+		1D7047A727B64C36009EDC3A /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		1D7047AB27B66837009EDC3A /* ShareMemeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareMemeInfo.swift; sourceTree = "<group>"; };
+		1D7047AD27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareMemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D72600B27ABAE7E005314BC /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		1D72600C27ABAE7E005314BC /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		1D72600F27ABBB8B005314BC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1D72601227ABDAFD005314BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D791EEE27BB63BC005C0194 /* ShareTvInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTvInfo.swift; sourceTree = "<group>"; };
+		1D791EF127BB63DD005C0194 /* ShareWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWeatherInfo.swift; sourceTree = "<group>"; };
+		1D791EF827BB7EF9005C0194 /* ShareTvCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTvCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D943ABA27ABF35A00A0C671 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1D9512D827BA38CE00BF2F59 /* ShareBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBookTableViewCell.swift; sourceTree = "<group>"; };
+		1D9512DA27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		1D9512DC27BA390400BF2F59 /* ShareTvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTvTableViewCell.swift; sourceTree = "<group>"; };
+		1D98FEFA27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DBAFDDD27BCD9D5006BFF40 /* suncloud1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suncloud1.json; sourceTree = "<group>"; };
+		1DBAFDDE27BCD9D5006BFF40 /* weatherLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weatherLoading.json; sourceTree = "<group>"; };
+		1DBAFDDF27BCD9D5006BFF40 /* rain2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rain2.json; sourceTree = "<group>"; };
+		1DBAFDE027BCD9D5006BFF40 /* sun3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sun3.json; sourceTree = "<group>"; };
+		1DBAFDE527BCE544006BFF40 /* smoke4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smoke4.json; sourceTree = "<group>"; };
 		1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		1DC0BB2827BA8E26002CF9CA /* ShareBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DC0BB2A27BA902A002CF9CA /* ShareBookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBookInfo.swift; sourceTree = "<group>"; };
 		8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B09DE345D1F55DBAC69CC09 /* Pods-project1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project1.release.xcconfig"; path = "Target Support Files/Pods-project1/Pods-project1.release.xcconfig"; sourceTree = "<group>"; };
 		A2A428DF3548636EC45E1373 /* Pods-project1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project1.debug.xcconfig"; path = "Target Support Files/Pods-project1/Pods-project1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,9 +161,9 @@
 			files = (
 				1D72602C27ABDC68005314BC /* FirebaseDatabase in Frameworks */,
 				1D72604627ABDC69005314BC /* FirebaseFunctionsSwift-Beta in Frameworks */,
-				942653CD4565B2900C0908E4 /* Pods_project1.framework in Frameworks */,
 				1D72603427ABDC68005314BC /* FirebaseAuth in Frameworks */,
 				1D72601C27ABDC68005314BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				1DC0BB2527BA89A9002CF9CA /* Pods_project1.framework in Frameworks */,
 				1D72602A27ABDC68005314BC /* FirebasePerformance in Frameworks */,
 				1D72604227ABDC69005314BC /* FirebaseStorage in Frameworks */,
 				1D72602427ABDC68005314BC /* FirebaseFunctionsCombine-Community in Frameworks */,
@@ -142,6 +199,26 @@
 				8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D36BAD927B53ED900B747D9 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				1D36BADA27B53EED00B747D9 /* ShareViewController.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		1D36BADC27B53F8000B747D9 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				1D791EF627BB7E90005C0194 /* Weather */,
+				1D791EF727BB7E9B005C0194 /* Tv */,
+				1D791EF527BB7E8A005C0194 /* Books */,
+				1D791EF427BB7E84005C0194 /* Jokes */,
+				1D791EF327BB7E7A005C0194 /* Meme */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		1D3728A227B37C7600033936 /* UserInfo */ = {
@@ -201,6 +278,11 @@
 				1D943AB827ABF32000A0C671 /* Delegate */,
 				1D72601127ABBB9E005314BC /* Services */,
 				1D5088F127AA99DA006B7A91 /* Assets.xcassets */,
+				1DBAFDDD27BCD9D5006BFF40 /* suncloud1.json */,
+				1DBAFDDF27BCD9D5006BFF40 /* rain2.json */,
+				1DBAFDE027BCD9D5006BFF40 /* sun3.json */,
+				1DBAFDE527BCE544006BFF40 /* smoke4.json */,
+				1DBAFDDE27BCD9D5006BFF40 /* weatherLoading.json */,
 				1D72601227ABDAFD005314BC /* GoogleService-Info.plist */,
 				1D5088F627AA99DA006B7A91 /* Info.plist */,
 			);
@@ -210,7 +292,7 @@
 		1D5088FC27AAAB78006B7A91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D5088EE27AA99D8006B7A91 /* Main.storyboard */,
+				1D2E5C5D27BA352700A94053 /* Main.storyboard */,
 				1D5088F327AA99DA006B7A91 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -229,7 +311,8 @@
 			children = (
 				1D943AB927ABF33C00A0C671 /* Login */,
 				1D660A0427B10B0600296123 /* Chat */,
-				1D7C71BB27B25B7D004785E2 /* Status */,
+				1D7C71BB27B25B7D004785E2 /* Story */,
+				1D36BAD927B53ED900B747D9 /* Share */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				1D943AB727ABF30A00A0C671 /* Chat */,
+				1D3728B227B3CF8F00033936 /* Story */,
+				1D36BADC27B53F8000B747D9 /* Share */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -245,8 +330,9 @@
 		1D5958D127ACE35F00B6ABFA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D3728A327B37C8A00033936 /* StoryInfo */,
 				1D3728A227B37C7600033936 /* UserInfo */,
+				1D3728A327B37C8A00033936 /* StoryInfo */,
+				1D7047A627B64C11009EDC3A /* ShareInfo */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +356,19 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		1D7047A627B64C11009EDC3A /* ShareInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1D7047A727B64C36009EDC3A /* ShareManager.swift */,
+				1D7047AB27B66837009EDC3A /* ShareMemeInfo.swift */,
+				1D2E5C5327BA22FF00A94053 /* ShareJokesInfo.swift */,
+				1DC0BB2A27BA902A002CF9CA /* ShareBookInfo.swift */,
+				1D791EEE27BB63BC005C0194 /* ShareTvInfo.swift */,
+				1D791EF127BB63DD005C0194 /* ShareWeatherInfo.swift */,
+			);
+			path = ShareInfo;
+			sourceTree = "<group>";
+		};
 		1D72601127ABBB9E005314BC /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,13 +378,57 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		1D7C71BB27B25B7D004785E2 /* Status */ = {
+		1D791EF327BB7E7A005C0194 /* Meme */ = {
+			isa = PBXGroup;
+			children = (
+				1D36BADD27B53F9500B747D9 /* ShareMemeTableViewCell.swift */,
+				1D7047AD27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift */,
+			);
+			path = Meme;
+			sourceTree = "<group>";
+		};
+		1D791EF427BB7E84005C0194 /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				1D2E5C5927BA264B00A94053 /* ShareJokesTableViewCell.swift */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		1D791EF527BB7E8A005C0194 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				1D9512D827BA38CE00BF2F59 /* ShareBookTableViewCell.swift */,
+				1DC0BB2827BA8E26002CF9CA /* ShareBookCollectionViewCell.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		1D791EF627BB7E90005C0194 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				1D9512DA27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift */,
+				1D98FEFA27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		1D791EF727BB7E9B005C0194 /* Tv */ = {
+			isa = PBXGroup;
+			children = (
+				1D9512DC27BA390400BF2F59 /* ShareTvTableViewCell.swift */,
+				1D791EF827BB7EF9005C0194 /* ShareTvCollectionViewCell.swift */,
+			);
+			path = Tv;
+			sourceTree = "<group>";
+		};
+		1D7C71BB27B25B7D004785E2 /* Story */ = {
 			isa = PBXGroup;
 			children = (
 				1D3728B027B3A64700033936 /* StoryViewController.swift */,
 				1D3728B327B3EAB400033936 /* StoryDetailsViewController.swift */,
 			);
-			path = Status;
+			path = Story;
 			sourceTree = "<group>";
 		};
 		1D943AB727ABF30A00A0C671 /* Chat */ = {
@@ -293,7 +436,6 @@
 			children = (
 				1D50890627AAB5BF006B7A91 /* SideMenu */,
 				1D6609FB27B0FA9B00296123 /* ChatCell */,
-				1D3728B227B3CF8F00033936 /* Story */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -336,7 +478,8 @@
 				1D5088E127AA99D8006B7A91 /* Sources */,
 				1D5088E227AA99D8006B7A91 /* Frameworks */,
 				1D5088E327AA99D8006B7A91 /* Resources */,
-				92DBFA88CE77D14D713B129A /* [CP] Embed Pods Frameworks */,
+				1DC0BB2727BA89A9002CF9CA /* Embed Frameworks */,
+				24EF67DCCA05BA4F8F05CF0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,20 +559,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBAFDE327BCD9D5006BFF40 /* rain2.json in Resources */,
+				1DBAFDE427BCD9D5006BFF40 /* sun3.json in Resources */,
+				1D2E5C5E27BA352700A94053 /* Main.storyboard in Resources */,
 				1D5088F527AA99DA006B7A91 /* LaunchScreen.storyboard in Resources */,
+				1DBAFDE127BCD9D5006BFF40 /* suncloud1.json in Resources */,
 				1D3728AF27B3A2F900033936 /* CollectionViewCell2.xib in Resources */,
 				1D72600E27ABAE7E005314BC /* ChatTableViewCell.xib in Resources */,
 				1D72601327ABDAFD005314BC /* GoogleService-Info.plist in Resources */,
 				1D5088F227AA99DA006B7A91 /* Assets.xcassets in Resources */,
 				1D3728AD27B3A2F500033936 /* Header.xib in Resources */,
-				1D5088F027AA99D8006B7A91 /* Main.storyboard in Resources */,
+				1DBAFDE627BCE544006BFF40 /* smoke4.json in Resources */,
+				1DBAFDE227BCD9D5006BFF40 /* weatherLoading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		92DBFA88CE77D14D713B129A /* [CP] Embed Pods Frameworks */ = {
+		24EF67DCCA05BA4F8F05CF0C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,21 +625,37 @@
 			files = (
 				1D3728AB27B3A1EA00033936 /* Header.swift in Sources */,
 				1D943ABB27ABF35A00A0C671 /* LoginViewController.swift in Sources */,
+				1D36BADB27B53EED00B747D9 /* ShareViewController.swift in Sources */,
+				1D9512DD27BA390400BF2F59 /* ShareTvTableViewCell.swift in Sources */,
+				1D7047A827B64C36009EDC3A /* ShareManager.swift in Sources */,
+				1D36BADE27B53F9500B747D9 /* ShareMemeTableViewCell.swift in Sources */,
+				1D2E5C5B27BA264B00A94053 /* ShareJokesTableViewCell.swift in Sources */,
 				1D5088ED27AA99D8006B7A91 /* WelcomeViewController.swift in Sources */,
 				1D5088E927AA99D8006B7A91 /* AppDelegate.swift in Sources */,
+				1D9512D927BA38CE00BF2F59 /* ShareBookTableViewCell.swift in Sources */,
+				1D791EF927BB7EF9005C0194 /* ShareTvCollectionViewCell.swift in Sources */,
 				1D3728A527B37CA100033936 /* StoryInfo.swift in Sources */,
 				1D660A0327B108F500296123 /* SettingsTableViewCell.swift in Sources */,
+				1DC0BB2B27BA902A002CF9CA /* ShareBookInfo.swift in Sources */,
+				1D791EF227BB63DD005C0194 /* ShareWeatherInfo.swift in Sources */,
 				1D50890027AAAC1E006B7A91 /* ChatViewController.swift in Sources */,
+				1DC0BB2927BA8E26002CF9CA /* ShareBookCollectionViewCell.swift in Sources */,
 				1D5088EB27AA99D8006B7A91 /* SceneDelegate.swift in Sources */,
 				1D72600D27ABAE7E005314BC /* ChatTableViewCell.swift in Sources */,
 				1D660A0627B10B5800296123 /* IndividualChatViewController.swift in Sources */,
 				1D3728A927B3A1E300033936 /* CollectionViewCell2.swift in Sources */,
 				1D3728B127B3A64700033936 /* StoryViewController.swift in Sources */,
 				1D5958D327ACE38E00B6ABFA /* UserInfo.swift in Sources */,
+				1D791EEF27BB63BC005C0194 /* ShareTvInfo.swift in Sources */,
+				1D7047AC27B66837009EDC3A /* ShareMemeInfo.swift in Sources */,
 				1D3728A727B37CB300033936 /* StoryManager.swift in Sources */,
+				1D98FEFB27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift in Sources */,
 				1D51DB7827ACED1900E68B48 /* UserManager.swift in Sources */,
+				1D7047AE27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift in Sources */,
 				1DBF8F9327B250C300EB0945 /* SideMenuTableViewController.swift in Sources */,
+				1D2E5C5427BA22FF00A94053 /* ShareJokesInfo.swift in Sources */,
 				1D72601027ABBB8B005314BC /* Extension.swift in Sources */,
+				1D9512DB27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift in Sources */,
 				1D3728B427B3EAB400033936 /* StoryDetailsViewController.swift in Sources */,
 				1D6609FA27B0D28200296123 /* RoundedTabBarController.swift in Sources */,
 			);
@@ -500,14 +664,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1D5088EE27AA99D8006B7A91 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D5088EF27AA99D8006B7A91 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D5088F327AA99DA006B7A91 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -642,6 +798,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +818,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

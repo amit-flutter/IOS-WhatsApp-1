@@ -60,7 +60,7 @@ class StoryViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .white
 
-        textField = UITextField(frame: CGRect(x: 0, y: 0, width: collectionView.width, height: 50))
+        textField = UITextField(frame: CGRect(x: 10, y: 0, width: collectionView.width - 10, height: 50))
 //        textField.translatesAutoresizingMaskIntoConstraints = tr
         textField.placeholder = "Search New Story"
         textField.keyboardType = UIKeyboardType.default
