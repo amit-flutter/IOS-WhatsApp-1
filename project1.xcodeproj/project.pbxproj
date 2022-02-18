@@ -20,6 +20,7 @@
 		1D3728AF27B3A2F900033936 /* CollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3728AE27B3A2F900033936 /* CollectionViewCell2.xib */; };
 		1D3728B127B3A64700033936 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3728B027B3A64700033936 /* StoryViewController.swift */; };
 		1D3728B427B3EAB400033936 /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3728B327B3EAB400033936 /* StoryDetailsViewController.swift */; };
+		1D4BA12227BE61D9002D7520 /* ChangeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4BA12127BE61D9002D7520 /* ChangeProfileViewController.swift */; };
 		1D5088E927AA99D8006B7A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088E827AA99D8006B7A91 /* AppDelegate.swift */; };
 		1D5088EB27AA99D8006B7A91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088EA27AA99D8006B7A91 /* SceneDelegate.swift */; };
 		1D5088ED27AA99D8006B7A91 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5088EC27AA99D8006B7A91 /* WelcomeViewController.swift */; };
@@ -65,6 +66,7 @@
 		1D72604627ABDC69005314BC /* FirebaseFunctionsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604527ABDC69005314BC /* FirebaseFunctionsSwift-Beta */; };
 		1D72604827ABDC69005314BC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604727ABDC69005314BC /* FirebaseFunctions */; };
 		1D72604A27ABDC69005314BC /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1D72604927ABDC69005314BC /* FirebaseFirestoreCombine-Community */; };
+		1D72D97F27BE770300243AC9 /* userProfileDataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72D97E27BE770300243AC9 /* userProfileDataRealm.swift */; };
 		1D791EEF27BB63BC005C0194 /* ShareTvInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EEE27BB63BC005C0194 /* ShareTvInfo.swift */; };
 		1D791EF227BB63DD005C0194 /* ShareWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EF127BB63DD005C0194 /* ShareWeatherInfo.swift */; };
 		1D791EF927BB7EF9005C0194 /* ShareTvCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D791EF827BB7EF9005C0194 /* ShareTvCollectionViewCell.swift */; };
@@ -113,6 +115,7 @@
 		1D3728AE27B3A2F900033936 /* CollectionViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell2.xib; sourceTree = "<group>"; };
 		1D3728B027B3A64700033936 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		1D3728B327B3EAB400033936 /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
+		1D4BA12127BE61D9002D7520 /* ChangeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewController.swift; sourceTree = "<group>"; };
 		1D5088E527AA99D8006B7A91 /* project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5088E827AA99D8006B7A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5088EA27AA99D8006B7A91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		1D72600C27ABAE7E005314BC /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		1D72600F27ABBB8B005314BC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1D72601227ABDAFD005314BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D72D97E27BE770300243AC9 /* userProfileDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileDataRealm.swift; sourceTree = "<group>"; };
 		1D791EEE27BB63BC005C0194 /* ShareTvInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTvInfo.swift; sourceTree = "<group>"; };
 		1D791EF127BB63DD005C0194 /* ShareWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWeatherInfo.swift; sourceTree = "<group>"; };
 		1D791EF827BB7EF9005C0194 /* ShareTvCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTvCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 				1D3728A227B37C7600033936 /* UserInfo */,
 				1D3728A327B37C8A00033936 /* StoryInfo */,
 				1D7047A627B64C11009EDC3A /* ShareInfo */,
+				1D72D97E27BE770300243AC9 /* userProfileDataRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */,
 				1D5088FF27AAAC1E006B7A91 /* ChatViewController.swift */,
 				1D660A0527B10B5800296123 /* IndividualChatViewController.swift */,
+				1D4BA12127BE61D9002D7520 /* ChangeProfileViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -625,6 +631,7 @@
 			files = (
 				1D3728AB27B3A1EA00033936 /* Header.swift in Sources */,
 				1D943ABB27ABF35A00A0C671 /* LoginViewController.swift in Sources */,
+				1D4BA12227BE61D9002D7520 /* ChangeProfileViewController.swift in Sources */,
 				1D36BADB27B53EED00B747D9 /* ShareViewController.swift in Sources */,
 				1D9512DD27BA390400BF2F59 /* ShareTvTableViewCell.swift in Sources */,
 				1D7047A827B64C36009EDC3A /* ShareManager.swift in Sources */,
@@ -644,6 +651,7 @@
 				1D72600D27ABAE7E005314BC /* ChatTableViewCell.swift in Sources */,
 				1D660A0627B10B5800296123 /* IndividualChatViewController.swift in Sources */,
 				1D3728A927B3A1E300033936 /* CollectionViewCell2.swift in Sources */,
+				1D72D97F27BE770300243AC9 /* userProfileDataRealm.swift in Sources */,
 				1D3728B127B3A64700033936 /* StoryViewController.swift in Sources */,
 				1D5958D327ACE38E00B6ABFA /* UserInfo.swift in Sources */,
 				1D791EEF27BB63BC005C0194 /* ShareTvInfo.swift in Sources */,

@@ -73,32 +73,30 @@ class ChatViewController: UIViewController {
     @objc private func didTapfloatButton() {
         print("pressed")
 
-        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+//        UIApplication.share("Text to share")
 
-        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
-            (_: UIAlertAction!) -> Void in
-            print("Saved")
-        })
+        guard let image = UIImage(named: "Image1"), let url = URL(string: "http://google.com") else { return }
 
-        let deleteAction = UIAlertAction(title: "Delete", style: .default, handler: {
-            (_: UIAlertAction!) -> Void in
-            print("Deleted")
-        })
+        let data = ["Text, Image and url", image, url] as [Any]
+        UIApplication.share(data)
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (_: UIAlertAction!) -> Void in
-            print("Cancelled")
-        })
-        optionMenu.addAction(deleteAction)
-        optionMenu.addAction(saveAction)
-        optionMenu.addAction(cancelAction)
-        present(optionMenu, animated: true, completion: nil)
+//        let textToShare = "Swift is awesome!  Check out this website about it!"
+//
+//        if let myWebsite = NSURL(string: "http://www.codingexplorer.com/") {
+//            let objectsToShare: [Any] = [textToShare, myWebsite]
+//            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+//
+//            activityVC.popoverPresentationController?.sourceView = view
+//            present(activityVC, animated: true, completion: nil)
+//        }
     }
 
     @IBAction func menuTapped(_ sender: UIBarButtonItem) {
         present(menu!, animated: true, completion: nil)
     }
 }
+
+
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

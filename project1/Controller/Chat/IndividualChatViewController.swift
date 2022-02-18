@@ -5,6 +5,7 @@
 //  Created by karmaln technology on 07/02/22.
 //
 
+import Hero
 import UIKit
 
 class IndividualChatViewController: UIViewController {
@@ -15,27 +16,24 @@ class IndividualChatViewController: UIViewController {
     @IBOutlet var emailLbl: UILabel!
     @IBOutlet var addressLbl: UILabel!
     @IBOutlet var userProfile: UIImageView!
-    @IBOutlet weak var fullUserName: UILabel!
+    @IBOutlet var fullUserName: UILabel!
 
-    @IBOutlet weak var backgorundShadow: UIView!
+    @IBOutlet var changeUserProfile: UIButton!
+    @IBOutlet var backgorundShadow: UIView!
     var userInfoIndividual: Result?
+    var isZoom: Bool = false
 
     func loadData() {
-
-        userProfile.applyshadowWithCorner(containerView: backgorundShadow, cornerRadious: 100)
-
-        let first:String = (userInfoIndividual?.name?.first)!
-        let last:String = (userInfoIndividual?.name?.last)!
-        let usertitle:String = (userInfoIndividual?.name?.title)!
-        var dob:String = (userInfoIndividual?.dob?.date)!
+        let first: String = (userInfoIndividual?.name?.first)!
+        let last: String = (userInfoIndividual?.name?.last)!
+        let usertitle: String = (userInfoIndividual?.name?.title)!
+        var dob: String = (userInfoIndividual?.dob?.date)!
         dob = dob.substring(to: 10)
 
+        dobLbl.text = dob
         title = (userInfoIndividual?.name?.first)!
         userProfile.imageFromURL(urlString: (userInfoIndividual?.picture?.large)!)
-        let raduis = userProfile.height / 2
-        userProfile.raduis(reduisSize: raduis)
         userName.text = userInfoIndividual?.name?.first
-        dobLbl.text = dob
         usernameIdLbl.text = userInfoIndividual?.login?.username
         phoneLbl.text = userInfoIndividual?.phone
         emailLbl.text = userInfoIndividual?.email
@@ -43,11 +41,35 @@ class IndividualChatViewController: UIViewController {
         fullUserName.text = "\(usertitle) \(first) \(last)"
     }
 
+    func loadUi() {
+        userProfile.hero.id = "ironMan"
+        userProfile.applyshadowWithCorner(containerView: backgorundShadow, cornerRadious: 100)
+        userProfile.raduis(reduisSize: userProfile.height / 2)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapImage))
+//        userProfile.isUserInteractionEnabled = true
+//        userProfile.addGestureRecognizer(tapGestureRecognizer)
+        changeUserProfile.raduis(reduisSize: changeUserProfile.width / 2)
+        changeUserProfile.border(borderSize: 2)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUi()
         loadData()
     }
+
+    @IBAction func changeUserProfileAction(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "gotoChangeProfile") as! ChangeProfileViewController
+        vc.profileImageLink = userInfoIndividual?.picture?.large
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func tapImage() {
+        isZoom = !isZoom
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+            self.userProfile.transform = self.isZoom ? CGAffineTransform(translationX: 1.3, y: 1.3) : CGAffineTransform.identity
+            self.userProfile.enableZoom()
+        }, completion: nil)
+    }
 }
-
-
-

@@ -11,5 +11,6 @@ target 'project1' do
   pod 'Hero'
   pod 'Alamofire', '~> 5.5'
   pod 'lottie-ios'
+  pod 'RealmSwift'
 
 end

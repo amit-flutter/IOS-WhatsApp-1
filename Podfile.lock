@@ -3,6 +3,11 @@ PODS:
   - Hero (1.6.1)
   - lottie-ios (3.2.3)
   - PinterestUISwift (0.2.0)
+  - Realm (10.20.0):
+    - Realm/Headers (= 10.20.0)
+  - Realm/Headers (10.20.0)
+  - RealmSwift (10.20.0):
+    - Realm (= 10.20.0)
   - SideMenu (6.5.0)
 
 DEPENDENCIES:
@@ -10,6 +15,7 @@ DEPENDENCIES:
   - Hero
   - lottie-ios
   - PinterestUISwift
+  - RealmSwift
   - SideMenu (~> 6.0)
 
 SPEC REPOS:
@@ -18,6 +24,8 @@ SPEC REPOS:
     - Hero
     - lottie-ios
     - PinterestUISwift
+    - Realm
+    - RealmSwift
     - SideMenu
 
 SPEC CHECKSUMS:
@@ -25,8 +33,10 @@ SPEC CHECKSUMS:
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   PinterestUISwift: 41727d6f72e1b338ef47490537746c690df64880
+  Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
+  RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 091e8d812734e294cfe2f58362efe3a9107076f4
+PODFILE CHECKSUM: ad0b3aaec4edf6ac4e7cebcc572b8454f551829d
 
 COCOAPODS: 1.11.2
