@@ -30,7 +30,6 @@
 		1D51DB7827ACED1900E68B48 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D51DB7727ACED1900E68B48 /* UserManager.swift */; };
 		1D5958D327ACE38E00B6ABFA /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5958D227ACE38E00B6ABFA /* UserInfo.swift */; };
 		1D6609FA27B0D28200296123 /* RoundedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6609F927B0D28200296123 /* RoundedTabBarController.swift */; };
-		1D660A0327B108F500296123 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D660A0127B108F500296123 /* SettingsTableViewCell.swift */; };
 		1D660A0627B10B5800296123 /* IndividualChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D660A0527B10B5800296123 /* IndividualChatViewController.swift */; };
 		1D7047A827B64C36009EDC3A /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7047A727B64C36009EDC3A /* ShareManager.swift */; };
 		1D7047AC27B66837009EDC3A /* ShareMemeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7047AB27B66837009EDC3A /* ShareMemeInfo.swift */; };
@@ -80,7 +79,7 @@
 		1DBAFDE327BCD9D5006BFF40 /* rain2.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDDF27BCD9D5006BFF40 /* rain2.json */; };
 		1DBAFDE427BCD9D5006BFF40 /* sun3.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDE027BCD9D5006BFF40 /* sun3.json */; };
 		1DBAFDE627BCE544006BFF40 /* smoke4.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DBAFDE527BCE544006BFF40 /* smoke4.json */; };
-		1DBF8F9327B250C300EB0945 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */; };
+		1DBF8F9327B250C300EB0945 /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBF8F9127B250C300EB0945 /* SideMenuTableView.swift */; };
 		1DC0BB2527BA89A9002CF9CA /* Pods_project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */; };
 		1DC0BB2627BA89A9002CF9CA /* Pods_project1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DC0BB2927BA8E26002CF9CA /* ShareBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0BB2827BA8E26002CF9CA /* ShareBookCollectionViewCell.swift */; };
@@ -97,6 +96,16 @@
 				1DC0BB2627BA89A9002CF9CA /* Pods_project1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC554B627C3ABE2005935E8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -127,7 +136,6 @@
 		1D51DB7727ACED1900E68B48 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		1D5958D227ACE38E00B6ABFA /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		1D6609F927B0D28200296123 /* RoundedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTabBarController.swift; sourceTree = "<group>"; };
-		1D660A0127B108F500296123 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1D660A0527B10B5800296123 /* IndividualChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualChatViewController.swift; sourceTree = "<group>"; };
 		1D7047A727B64C36009EDC3A /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		1D7047AB27B66837009EDC3A /* ShareMemeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareMemeInfo.swift; sourceTree = "<group>"; };
@@ -150,9 +158,11 @@
 		1DBAFDDF27BCD9D5006BFF40 /* rain2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rain2.json; sourceTree = "<group>"; };
 		1DBAFDE027BCD9D5006BFF40 /* sun3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sun3.json; sourceTree = "<group>"; };
 		1DBAFDE527BCE544006BFF40 /* smoke4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smoke4.json; sourceTree = "<group>"; };
-		1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		1DBF8F9127B250C300EB0945 /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
 		1DC0BB2827BA8E26002CF9CA /* ShareBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		1DC0BB2A27BA902A002CF9CA /* ShareBookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareBookInfo.swift; sourceTree = "<group>"; };
+		1DC554A627C3ABDF005935E8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1DC554A827C3ABDF005935E8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B09DE345D1F55DBAC69CC09 /* Pods-project1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project1.release.xcconfig"; path = "Target Support Files/Pods-project1/Pods-project1.release.xcconfig"; sourceTree = "<group>"; };
 		A2A428DF3548636EC45E1373 /* Pods-project1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project1.debug.xcconfig"; path = "Target Support Files/Pods-project1/Pods-project1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				8AE04F1BF3D16C3F3692867C /* Pods_project1.framework */,
+				1DC554A627C3ABDF005935E8 /* WidgetKit.framework */,
+				1DC554A827C3ABDF005935E8 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,7 +317,6 @@
 		1D50890627AAB5BF006B7A91 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1D660A0127B108F500296123 /* SettingsTableViewCell.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -354,7 +365,7 @@
 		1D660A0427B10B0600296123 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				1DBF8F9127B250C300EB0945 /* SideMenuTableViewController.swift */,
+				1DBF8F9127B250C300EB0945 /* SideMenuTableView.swift */,
 				1D5088FF27AAAC1E006B7A91 /* ChatViewController.swift */,
 				1D660A0527B10B5800296123 /* IndividualChatViewController.swift */,
 				1D4BA12127BE61D9002D7520 /* ChangeProfileViewController.swift */,
@@ -486,6 +497,7 @@
 				1D5088E327AA99D8006B7A91 /* Resources */,
 				1DC0BB2727BA89A9002CF9CA /* Embed Frameworks */,
 				24EF67DCCA05BA4F8F05CF0C /* [CP] Embed Pods Frameworks */,
+				1DC554B627C3ABE2005935E8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -642,7 +654,6 @@
 				1D9512D927BA38CE00BF2F59 /* ShareBookTableViewCell.swift in Sources */,
 				1D791EF927BB7EF9005C0194 /* ShareTvCollectionViewCell.swift in Sources */,
 				1D3728A527B37CA100033936 /* StoryInfo.swift in Sources */,
-				1D660A0327B108F500296123 /* SettingsTableViewCell.swift in Sources */,
 				1DC0BB2B27BA902A002CF9CA /* ShareBookInfo.swift in Sources */,
 				1D791EF227BB63DD005C0194 /* ShareWeatherInfo.swift in Sources */,
 				1D50890027AAAC1E006B7A91 /* ChatViewController.swift in Sources */,
@@ -660,7 +671,7 @@
 				1D98FEFB27BBBE44007EB30B /* ShareWeatherCollectionViewCell.swift in Sources */,
 				1D51DB7827ACED1900E68B48 /* UserManager.swift in Sources */,
 				1D7047AE27B67AB4009EDC3A /* ShareMemeCollectionViewCell.swift in Sources */,
-				1DBF8F9327B250C300EB0945 /* SideMenuTableViewController.swift in Sources */,
+				1DBF8F9327B250C300EB0945 /* SideMenuTableView.swift in Sources */,
 				1D2E5C5427BA22FF00A94053 /* ShareJokesInfo.swift in Sources */,
 				1D72601027ABBB8B005314BC /* Extension.swift in Sources */,
 				1D9512DB27BA38EF00BF2F59 /* ShareWeatherTableViewCell.swift in Sources */,

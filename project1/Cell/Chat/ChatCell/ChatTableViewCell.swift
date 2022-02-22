@@ -13,7 +13,7 @@ protocol ChatTableViewCellDelegate {
 
 class ChatTableViewCell: UITableViewCell {
     @IBOutlet var chatView: UIView!
-    var menu: SideMenuTableViewController?
+    var menu: SidemenuTableView?
     var delegate: ChatTableViewCellDelegate?
 
     @IBOutlet var userProfileImage: UIImageView?

@@ -14,16 +14,19 @@ protocol UserInfoManagerDelegate {
 
 struct UserInfoManager {
     var delegate: UserInfoManagerDelegate?
+    var isPaginatin: Bool = false
+    var isAlreadyRequested:Bool = false
 
-    func fetchUserInfo() {
-//        print("Fatching Started....!")
-        let userCount = "50"
+    mutating func fetchUserInfo(pagination: Bool = false) {
+        isPaginatin = pagination
+        isAlreadyRequested = pagination
+        let userCount = isPaginatin ? "5" : "10"
         let apiURl = "https://randomuser.me/api/?results=" + userCount
         perform(with: apiURl)
     }
 
     func perform(with urlString: String) {
-        print("Perform Started....!")
+//        print("Perform Started....!")
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, _, error in
@@ -35,15 +38,19 @@ struct UserInfoManager {
                 if let safeData = data {
                     if let user = self.parseJson(safeData) {
 //                        print("Updateing User Now...!")
-                        self.delegate?.didUpdateUser(user: user)
-
+                        if self.isPaginatin == true {
+                            print("Fatching Again For New Data......!")
+                            self.delegate?.didUpdateUser(user: user)
+                        }
+                        else {
+                            print("Fatching Once......!")
+                            self.delegate?.didUpdateUser(user: user)
+                        }
                     }
                 }
             }
             task.resume()
         }
-
-//        print("\n\n-------UserData-------\n\n")
     }
 
     func parseJson(_ userData: Data) -> UserInfo? {
@@ -51,7 +58,6 @@ struct UserInfoManager {
         let decoder = JSONDecoder()
         do {
             let decodeData = try decoder.decode(UserInfo.self, from: userData)
-            delegate?.didUpdateUser(user: decodeData)
             return decodeData
         } catch {
             print(error)

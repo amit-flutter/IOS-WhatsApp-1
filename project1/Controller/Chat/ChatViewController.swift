@@ -9,14 +9,14 @@ import SideMenu
 import UIKit
 
 class ChatViewController: UIViewController {
-    var menu: SideMenuNavigationController?
-    var updatedUserserInfo: UserInfo?
-    var userInfoManager = UserInfoManager()
+    private var sidemenu: SideMenuNavigationController?
+    private var updatedUserserInfo: UserInfo?
+    private var userInfoManager = UserInfoManager()
+    private var isFatching: Bool = false
+    private var btn = UIButton(type: .custom)
 
     @IBOutlet var chatTableview: UITableView!
     weak var activityIndicatorView: UIActivityIndicatorView!
-
-    var btn = UIButton(type: .custom)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class ChatViewController: UIViewController {
         // Configur Sidemenu
         SidemenuConfig()
 
-        // Configur TableView
-        chatTableview.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "chatcell") // Custome Cell With Xib File
+        // Configur TableView ( Custome Cell With Xib File )
+        chatTableview.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "chatcell")
         chatTableview.delegate = self
         chatTableview.dataSource = self
 
@@ -42,10 +42,12 @@ class ChatViewController: UIViewController {
     }
 
     func SidemenuConfig() {
-        menu = SideMenuNavigationController(rootViewController: SideMenuTableViewController())
-        menu?.leftSide = true
+        let menu = SidemenuTableView()
+        menu.delegate = self
+        sidemenu = SideMenuNavigationController(rootViewController: menu)
+        sidemenu!.leftSide = true
         SideMenuManager.default.addPanGestureToPresent(toView: view)
-        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.leftMenuNavigationController = sidemenu
     }
 
     func ActivityIndicator() {
@@ -57,63 +59,40 @@ class ChatViewController: UIViewController {
     }
 
     func floatingButton() {
-        btn.frame = CGRect(x: view.width - 90, y: view.height - 190, width: 60, height: 60)
+        btn.frame = CGRect(x: view.width - 90, y: view.height - 160, width: 60, height: 60)
         btn.setImage(UIImage(systemName: "text.bubble"), for: .normal)
         btn.tintColor = .systemBackground
         btn.backgroundColor = UIColor(named: "CGreen")
         btn.raduis(reduisSize: 30)
-        addButtonAction()
-        view.addSubview(btn)
-    }
-
-    private func addButtonAction() {
         btn.addTarget(self, action: #selector(didTapfloatButton), for: .touchUpInside)
+        view.addSubview(btn)
     }
 
     @objc private func didTapfloatButton() {
         print("pressed")
-
-//        UIApplication.share("Text to share")
-
         guard let image = UIImage(named: "Image1"), let url = URL(string: "http://google.com") else { return }
-
         let data = ["Text, Image and url", image, url] as [Any]
         UIApplication.share(data)
-
-//        let textToShare = "Swift is awesome!  Check out this website about it!"
-//
-//        if let myWebsite = NSURL(string: "http://www.codingexplorer.com/") {
-//            let objectsToShare: [Any] = [textToShare, myWebsite]
-//            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-//
-//            activityVC.popoverPresentationController?.sourceView = view
-//            present(activityVC, animated: true, completion: nil)
-//        }
     }
 
     @IBAction func menuTapped(_ sender: UIBarButtonItem) {
-        present(menu!, animated: true, completion: nil)
+        present(sidemenu!, animated: true, completion: nil)
     }
 }
-
-
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         updatedUserserInfo?.results!.count ?? 0
     }
 
-    // There is just one row in every section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    // Set the spacing between sections
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
-
-    // Make the background color show through
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
@@ -128,7 +107,32 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         cell.userProfileImage?.imageFromURL(urlString: (updatedUserserInfo?.results?[indexPath.section].picture?.large!)!)
         cell.delegate = self
         cell.myVC = self
+
+        // fatching new data from server by making api call
+        // calling function when user reach to the end of the cell
+        if indexPath.section == (updatedUserserInfo?.results!.count)! - 1 { // last cell
+            if updatedUserserInfo?.results!.count ?? 0 > 0 {
+                // fetch more data
+                print("Flag : \(isFatching)")
+                if !isFatching {
+                    print("---------------- fetch more")
+                    isFatching = true
+                    chatTableview.tableFooterView = createSpinenrFooter()
+                    userInfoManager.fetchUserInfo(pagination: true)
+                }
+            }
+        }
         return cell
+    }
+
+    private func createSpinenrFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size
+                .width, height: 100))
+        let spinner = UIActivityIndicatorView()
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        return footerView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -142,11 +146,17 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ChatViewController: UserInfoManagerDelegate {
     func didUpdateUser(user: UserInfo) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
             print("Updating.....!")
-            self.updatedUserserInfo = user
+            if isFatching {
+                self.updatedUserserInfo?.results?.append(contentsOf: user.results!)
+                isFatching = false
+            } else {
+                self.updatedUserserInfo = user
+            }
             self.activityIndicatorView.stopAnimating()
             self.chatTableview.reloadData()
+            self.chatTableview.tableFooterView = nil
         }
     }
 
@@ -162,5 +172,17 @@ extension ChatViewController: ChatTableViewCellDelegate {
 
     func didTapChat() {
         print("didTapChat")
+    }
+}
+
+extension ChatViewController: SidemenuTableViewDelegate {
+    func didselectMenuItem(named: String) {
+        print(named)
+        sidemenu?.dismiss(animated: true, completion: {
+            if named == "Home" {
+            } else if named == "Info" {
+            } else if named == "Settings" {
+            }
+        })
     }
 }

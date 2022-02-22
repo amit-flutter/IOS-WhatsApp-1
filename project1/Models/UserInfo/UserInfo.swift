@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - UserInfo
 struct UserInfo: Decodable {
-    let results: [Result]?
+    var results: [Result]?
     let info: Info?
 }
 
